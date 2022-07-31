@@ -1,98 +1,16 @@
-# Poly-Hex
-Test environment for artificial consciousness. Template hex-grid world compatible with OpenAI gym. Created by Mystery Machine (Team 9).
+# Strategy Game (Retired)
+Foundational code of a strategy game and early building of a game engine
 
-#### Project Management Tool
-[GitHub](https://github.com)
+## Disclaimer
+Warning - This is a copy of the files I originally had, however, I have since switched PC and this is not in a working state at all. It exists to display knowledge of C and C++ alongside the ability of self-directed learning and work. Reviewing my code, there is a significant amount wrong with it, for example I have created large quantities of files for similar classes and functions alongside a great difficulty to follow along with what is occuring due to a lack of comments and docstrings. Reflecting on it, I would almost change everything, however I am still proud of the extent in which I was able to push this project, especially given the afforementioned flaws.
 
 ## Description
-This program provides a simulated environment that can be used for experiments with artificial consciousness. The simulated environment reflects conditions from human evolutionary history by simulating survival, i.e., gathering food and avoiding predators. Multiple artificially intelligent agents at once can be used in the environment.
+This game aimed to aleviate late game performance issues of grand strategy games by utilising an object orientated approach to the tiles that formed the foundation of the game. For the testing ground I modelled Ireland, the four provinces (Ulster, Connaught, Leinser, and Munster) and their constituent counties (32 in total). It possesed a functional window which allowed for selection of three tiers of bitmaps (Aiming to sacrifice memory for performance) and checking each layer if it had been formed. Intended mechanics were to incorporate conquest, production, population, and formation of greater areas.
 
-## Getting Started
+## Performance improvement
+To improve performance I intended on ticking down the nodal tree structure. By ticking I mean the calculation of the reward of mechanics on a regular basis. For other games this presents a major issue as towards the late game they can become bloated with added buildings and modifiers as well as the smaller parts becoming more and more arbritrary as you grow larger. My solution was to abstract once certain conditions were met with these building and modifiers carrying up the tree.
 
-### Dependencies
-* A requirements.txt file is provided in the files:
-  * cloudpickle 2.0.0
-  * gym 0.23.1
-  * gym-notices 0.0.6
-  * numpy 1.22.3
-  * pygame 2.1.2
-* The program was developed on Windows
-* Python language is used.
+As an example, the game checks for formation in territory -> region -> provinces or Ireland -> Leinster -> Meath but if I controlled all of the provinces in Leinster and combined my provinces I would perform one set of calculations for one region rather than nine sets for provinces. Extended to a far larger scale at an increase at computation early on, late game performance could be arguably significantly better. As a benefit towards this, these more abstracted areas could have greater mechanics associated with them that are inheritited by their parents. 
 
-### Installing
-* Download this program from the releases section
-* or Download the files individually from GitHub
-* or Download the .zip file if provided
-
-### Executing program
-1. Open the Main.py file.
-2. Follow the instructions at the top of the Main.py file or those here
-   1. Provide WorldEnv or WorldEnvRender with values.
-   ```
-   env_parameters = {
-        "width":                30,
-        "height":               30,
-        "seed":                 1,
-        "max_turns":            80,
-        "non_trav_chance":      40
-    }
-   ```
-   2. Provide obj_counts with values.
-   ```
-   # AGENT, SPREDATOR, RPREDATOR, PPREDATOR, BBUSH, WATER, TREE
-   obj_counts = [20, 5, 5, 5, 30, 30, 30]
-   ``` 
-   3. Customise SimObj parameters
-   ```
-   obj_parameters = {
-        "agent": {
-            "detectability":    80,
-            "health":           10,
-            "attack":           1,
-            "hunger":           20,
-            "thirst":           20
-        },
-   ...
-   ``` 
-   4. Input these values into the rendering or regular environments
-   ```
-   env = WorldEnvRender(screen_width, screen_height, delay, env_parameters, obj_counts, obj_parameters, log)
-   env = WorldEnv(env_parameters, obj_counts, obj_parameters, log)
-   ```
-### Usage examples
-Example values for ```obj_counts```, ```obj_counts = [20, 1, 7, 1, 30, 30, 30]```.
-The values are (from left to right):
-* Agents
-* Stationary Predators
-* Random Predators
-* Patrol Predators
-* Berry Bushes
-* Water
-* Trees
-
-Example values for ```env``` are set in env_parameters and are passed into ```env = WorldEnvRender(screen_width, screen_height, delay, env_parameters, obj_counts, obj_parameters, log)``` where the values are used in the WorldEnvRender function. Each of the parameters functionality is highlighted by the key to each of the values.
-
-Parameters for Simulation Objects are also provided and passed to the envrionment through Main.py with adjustable values for all. Their functionality is stated within the keys of the dictionary with their values represented as values.
-
-## Authors
-Contributor names and GitHub links
-* Alex Phillips ([@AlexWHP](https://github.com/AlexWHP))
-* Barbora Sharrock ([@BSha259](https://github.com/BSha259))
-* Darryn He ([@dhe077](https://github.com/dhe077))
-* Kris Gemmell ([@KrisGemmell](https://github.com/KrisGemmell))
-* Kyle Saifiti ([@ksaifiti](https://github.com/ksaifiti))
-* Riley Irwin ([@RonkLonk](https://github.com/RonkLonk))
-
-## Future Plans
-* Letting artificial intelligence control the agents to test for artificial consciousness
-* Visualiser could be extended to be interactable (Select tiles and output information)
-* Tools
-* Huts
-* Any features that could add complexity to the environment for better testing of AI
-
-## Acknowledgement
-Inspiration, code snippets, etc.
-* Dr Josh Ljubo Bensemann.
-* Credit to [rbaltrusch](https://github.com/rbaltrusch/pygame_examples/blob/master/code/hexagonal_tiles/main.py) for the drawing functions for the visualiser. 
-* [Building a Custom Environment for Deep Reinforcement Learning with OpenAI Gym and Python](https://youtu.be/bD6V3rcr_54)
+TLDR - As the game progresses, there are less things to be ticked whilst keeping a healthy level of abstraction for the player. Improving performance into the lategame and keeping controlled land relevant.
 
