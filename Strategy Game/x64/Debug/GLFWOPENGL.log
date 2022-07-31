@@ -1,0 +1,10 @@
+﻿  Main.cpp
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Shader.h(44,40): warning C4101: 'e': unreferenced local variable
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(431,83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(431,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(422,36): warning C4101: 'x_pix': unreferenced local variable
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(422,50): warning C4101: 'index': unreferenced local variable
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(422,43): warning C4101: 'y_pix': unreferenced local variable
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(407): warning C4172: returning address of local variable or temporary: b
+C:\Users\AlexW\source\repos\GLFWOPENGL\GLFWOPENGL\Main.cpp(565): warning C4172: returning address of local variable or temporary: v
+  GLFWOPENGL.vcxproj -> C:\Users\AlexW\source\repos\GLFWOPENGL\x64\Debug\GLFWOPENGL.exe
