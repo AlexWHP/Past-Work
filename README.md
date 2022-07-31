@@ -12,6 +12,9 @@ When learning about data structures at University, October 2019, we were asked t
 
 ## C++
 
+## C
+XOR encryption of files
+
 ### Strategy Game
 
 ## Java
