@@ -1,6 +1,9 @@
 # Poly-Hex
 Test environment for artificial consciousness. Template hex-grid world compatible with OpenAI gym. Created by Mystery Machine (Team 9).
 
+## Publication
+Bensemann, J., O’Leary, P., Chen, Y., Miranda-Dukoski, L., & Witbrock, M.;  (2022, July). Evolving Artificial Language through Evolutionary Reinforcement Learning. In ALIFE 2022, the Twenty-First International Conference on the Synthesis and Simulation of Living Systems. MIT Press.
+
 #### Project Management Tool
 [GitHub](https://github.com)
 
