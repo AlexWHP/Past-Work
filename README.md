@@ -23,13 +23,6 @@ Best Computer Science Capstone Project - Client Nominated - Runner Up
 ### Strategy Game
 After playing multiple 4X and Grand Strategy Games a common issue is late game performance. After learning the fundamentals of C++, I decided to push that knowledge further into a design similar to these games geared towards late game performance through abstraction of the fundamental pieces that the game is built on. Ultimately, this project became bogged down within the OpenGL framework as I tried to project a 3D map using a height map and has significant issues when reviewing my code. I have since taken a paper on Graphics utilising OpenGL and worked on a project in a group setting that has set core documentation skills that present an oppurtunity to overcome these issues should I decide to restore and continue this project.
 
-## C
-XOR encryption of files
-
-## Java
-#### Bounce
-
-## SQL
-
-## LC3 (Assembly Language)
+### OpenGL
+Experienced implementing and utilising low level OpenGL functions. This includes implementing Phong Illumination for objects, ray tracing, parametric surfaces, and spline curves.
 
